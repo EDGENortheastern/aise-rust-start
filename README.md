@@ -1,22 +1,20 @@
-# aise-rust-start
+# Starting to Rust
 
-Very small Rust backend.
-Very simple steps.
+A very small Rust backend.
 
 ---
 
 ## What this is
 
 - A minimal Rust API
-- Uses Axum
-- Runs locally
-- Deploys on Render (free)
+- Uses [Axum](https://docs.rs/axum/latest/axum/)
+- Deployed on Render (free)
 
 ---
 
 ## Files
 
-```
+```text
 .
 ├── api/
 │   ├── src/
@@ -44,6 +42,10 @@ If this prints a version, you are ready.
 
 ## Step 2: Minimal app
 
+```bash
+cargo new api
+```
+
 File: `api/src/main.rs`
 
 This is the smallest working app.
@@ -63,7 +65,7 @@ cargo run
 
 You should see:
 
-```
+```bash
 Hello, world!
 ```
 
@@ -101,7 +103,7 @@ cargo run
 
 Open in browser:
 
-```
+```text
 http://localhost:3000/api/hello
 ```
 
@@ -109,18 +111,20 @@ http://localhost:3000/api/hello
 
 ## Step 4: Deploy (Render)
 
+- Go to [render.com](https://render.com/)
+- Connect your GitHub repo
 - Create a Web Service
 - Language: Rust
 - Root Directory: `api`
 - Build Command:
 
-```
+```bash
 cargo build --release
 ```
 
 - Start Command:
 
-```
+```bash
 cargo run --release
 ```
 
